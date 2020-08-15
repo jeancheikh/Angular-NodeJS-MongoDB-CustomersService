@@ -94,7 +94,7 @@ class Server {
 
     initRoutes() {
 
-
+        router.load(app, './controllers');
         // redirect all others to the index (HTML5 history)
         app.all('/*', (req, res) => {
             res.sendFile(__dirname + '/public/index.html');
